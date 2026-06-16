@@ -3,111 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AML Apex Motorsport League</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--green:#c8ff00;
+--dark:#0f1115;
+--card:#161a20;
+--border:#252b33;
 }
 
 body{
-background:#0f1115;
+background:
+linear-gradient(rgba(15,17,21,.88),rgba(15,17,21,.88)),
+url("https://i.imgur.com/3Bbpuac.png");
+background-size:900px;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-color:var(--dark);
 color:white;
 }
 
 header{
+position:sticky;
+top:0;
+z-index:999;
 background:#11151b;
-border-bottom:3px solid #c8ff00;
-padding:20px;
-text-align:center;
+border-bottom:2px solid var(--green);
+padding:15px;
 }
 
-.logo{
-width:280px;
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:var(--green);
 }
 
 .hero{
-height:70vh;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+}
 
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://i.imgur.com/3Bbpuac.png");
-
-background-size:cover;
-background-position:center;
+.hero img{
+width:320px;
+max-width:90%;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:3rem;
+margin-top:20px;
 }
 
 .hero p{
-color:#c8ff00;
-font-size:1.3rem;
+color:var(--green);
 margin-top:10px;
+font-size:1.2rem;
 }
 
-.btn{
-margin-top:30px;
+.discord-btn{
+margin-top:25px;
 padding:15px 30px;
-background:#c8ff00;
+background:var(--green);
 color:black;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 border-radius:10px;
 }
 
-.section{
+section{
 max-width:1200px;
 margin:auto;
-padding:50px 20px;
-}
-
-.card{
-background:#161a20;
-border:1px solid #252b33;
-border-radius:12px;
-padding:25px;
-margin-bottom:20px;
+padding:60px 20px;
 }
 
 h2{
+color:var(--green);
+margin-bottom:25px;
+}
+
+.card{
+background:rgba(22,26,32,.95);
+border:1px solid var(--border);
+border-radius:12px;
+padding:20px;
 margin-bottom:20px;
-color:#c8ff00;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:var(--green);
+color:black;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid var(--border);
+}
+
+iframe{
+width:100%;
+height:600px;
+border:none;
+border-radius:12px;
 }
 
 footer{
 text-align:center;
-padding:30px;
-border-top:1px solid #252b33;
+padding:40px;
+border-top:1px solid var(--border);
+margin-top:50px;
 }
 
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+iframe{
+height:250px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="https://i.imgur.com/tcdrVJ1.png" class="logo">
+<nav>
+<a href="#home">Home</a>
+<a href="#calendario">Calendário</a>
+<a href="#classificacao">Classificação</a>
+<a href="#pilotos">Pilotos</a>
+<a href="#equipes">Equipes</a>
+<a href="#tv">AML TV</a>
+<a href="#regulamento">Regulamento</a>
+</nav>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
+
+<img src="https://i.imgur.com/tcdrVJ1.png">
+
 <h1>AML APEX MOTORSPORT LEAGUE</h1>
+
 <p>COMPETE • EVOLUA • VENÇA</p>
 
-<a href="#" class="btn">ENTRAR NO DISCORD</a>
+<a class="discord-btn"
+href="https://discord.gg/tjF3EN53Hs"
+target="_blank">
+ENTRAR NO DISCORD
+</a>
+
 </section>
 
-<section class="section">
+<section id="calendario">
 
 <h2>Calendário 2026</h2>
 
@@ -128,8 +215,113 @@ border-top:1px solid #252b33;
 
 </section>
 
+<section id="classificacao">
+
+<h2>Classificação</h2>
+
+<div class="card">
+
+<table>
+
+<tr>
+<th>Pos</th>
+<th>Piloto</th>
+<th>Pontos</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>PREENCHER</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>PREENCHER</td>
+<td>0</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="pilotos">
+
+<h2>Pilotos</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>#00</h3>
+<p>PREENCHER</p>
+<p>Categoria: PREENCHER</p>
+</div>
+
+<div class="card">
+<h3>#00</h3>
+<p>PREENCHER</p>
+<p>Categoria: PREENCHER</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="equipes">
+
+<h2>Equipes</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>PREENCHER</h3>
+</div>
+
+<div class="card">
+<h3>PREENCHER</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="tv">
+
+<h2>AML TV</h2>
+
+<div class="card">
+
+<p>Insira aqui o link do canal quando criar.</p>
+
+<iframe
+src=""
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<section id="regulamento">
+
+<h2>Regulamento</h2>
+
+<div class="card">
+
+<p>
+Insira aqui o regulamento oficial da AML.
+</p>
+
+</div>
+
+</section>
+
 <footer>
+
 AML Apex Motorsport League © 2026
+
 </footer>
 
 </body>

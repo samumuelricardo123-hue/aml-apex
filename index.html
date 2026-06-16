@@ -5,117 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AML Apex Motorsport League</title>
 <style>
-:root{
---green:#c8ff00;--dark:#0f1115;--card:#161a20;--border:#252b33;
-}
+:root{--green:#c8ff00;--dark:#0f1115;--card:#161a20;--border:#252b33}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{
-background:linear-gradient(rgba(15,17,21,.85),rgba(15,17,21,.85)),url('https://i.imgur.com/3Bbpuac.png');
-background-size:900px;background-position:center;background-attachment:fixed;
-color:#fff;background-color:var(--dark);
-}
-header{position:sticky;top:0;background:#11151b;border-bottom:2px solid var(--green);z-index:99}
-nav{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;padding:15px}
-nav a{color:#fff;text-decoration:none;font-weight:bold}
-nav a:hover{color:var(--green)}
-.hero{text-align:center;padding:60px 20px}
-.hero img{max-width:320px;width:90%}
-.hero h1{margin-top:20px;font-size:3rem}
-.hero p{color:var(--green);margin-top:10px}
-.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:var(--green);color:#000;text-decoration:none;border-radius:8px;font-weight:bold}
+body{background:#0f1115;color:#fff}
+header{position:sticky;top:0;background:#11151b;border-bottom:2px solid var(--green)}
+nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;padding:15px}
+nav a{color:#fff;text-decoration:none}
 section{max-width:1200px;margin:auto;padding:40px 20px}
-h2{color:var(--green);margin-bottom:20px}
-.card{background:rgba(22,26,32,.96);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(rgba(15,17,21,.85),rgba(15,17,21,.85)),url('https://i.imgur.com/3Bbpuac.png');background-size:cover}
+.hero img{max-width:320px}
+.card{background:var(--card);border:1px solid var(--border);padding:15px;border-radius:10px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
 table{width:100%;border-collapse:collapse}
 th,td{padding:10px;border-bottom:1px solid var(--border)}
 th{background:var(--green);color:#000}
-iframe{width:100%;height:500px;border:none;border-radius:12px}
-footer{text-align:center;padding:30px;border-top:1px solid var(--border)}
+h2{color:var(--green);margin-bottom:15px}
 </style>
 </head>
 <body>
 
 <script>
-const CONFIG={
+const SITE={
 nomeLiga:"AML Apex Motorsport League",
 slogan:"COMPETE • EVOLUA • VENÇA",
+logo:"https://i.imgur.com/tcdrVJ1.png",
+fundo:"https://i.imgur.com/3Bbpuac.png",
 discord:"https://discord.gg/tjF3EN53Hs",
 youtube:"",
-proximaCorrida:"Singapore GP - 30/06/2026"
+
+calendario:[
+{},
+{},
+{}
+],
+
+pilotos:[
+{}
+],
+
+equipes:[
+{}
+],
+
+classificacao:[
+{}
+]
 };
 </script>
 
-<header>
-<nav>
+<header><nav>
 <a href="#home">Home</a>
-<a href="#calendario">Calendário</a>
-<a href="#classificacao">Classificação</a>
-<a href="#pilotos">Pilotos</a>
-<a href="#equipes">Equipes</a>
+<a href="#cal">Calendário</a>
+<a href="#cls">Classificação</a>
+<a href="#pil">Pilotos</a>
+<a href="#eq">Equipes</a>
 <a href="#tv">AML TV</a>
-<a href="#regulamento">Regulamento</a>
-</nav>
-</header>
+</nav></header>
 
 <section id="home" class="hero">
-<img src="https://i.imgur.com/tcdrVJ1.png">
-<h1>AML APEX MOTORSPORT LEAGUE</h1>
-<p>COMPETE • EVOLUA • VENÇA</p>
-<p><b>Próxima Corrida:</b> Singapore GP - 30/06/2026</p>
-<a class="btn" href="https://discord.gg/tjF3EN53Hs" target="_blank">Entrar no Discord</a>
+<img id="logo">
+<h1 id="nome"></h1>
+<p id="slogan"></p>
+<p><a id="discord" style="color:#c8ff00">Discord</a></p>
 </section>
 
-<section id="calendario">
-<h2>Calendário 2026</h2>
-<div class="card">🏁 Round 01 — Lusail 🇶🇦 — 16/06/2026</div>
-<div class="card">🏁 Round 02 — Baku 🇦🇿 — 23/06/2026</div>
-<div class="card">🏁 Round 03 — Singapore 🇸🇬 — 30/06/2026</div>
+<section id="cal"><h2>Calendário</h2><div id="calendario"></div></section>
+
+<section id="cls"><h2>Classificação</h2>
+<table><thead><tr><th>Pos</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr></thead>
+<tbody id="classificacao"></tbody></table>
 </section>
 
-<section id="classificacao">
-<h2>Classificação</h2>
-<div class="card">
-<table>
-<tr><th>Pos</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
-<tr><td>1</td><td>PREENCHER</td><td>PREENCHER</td><td>0</td></tr>
-<tr><td>2</td><td>PREENCHER</td><td>PREENCHER</td><td>0</td></tr>
-</table>
-</div>
-</section>
+<section id="pil"><h2>Pilotos</h2><div class="grid" id="pilotos"></div></section>
 
-<section id="pilotos">
-<h2>Pilotos</h2>
-<div class="grid">
-<div class="card">#01<br>PREENCHER<br>Categoria: PREENCHER</div>
-<div class="card">#02<br>PREENCHER<br>Categoria: PREENCHER</div>
-</div>
-</section>
+<section id="eq"><h2>Equipes</h2><div class="grid" id="equipes"></div></section>
 
-<section id="equipes">
-<h2>Equipes</h2>
-<div class="grid">
-<div class="card">PREENCHER</div>
-<div class="card">PREENCHER</div>
-</div>
-</section>
+<section id="tv"><h2>AML TV</h2><div class="card">Cole o link do YouTube em SITE.youtube</div></section>
 
-<section id="tv">
-<h2>AML TV</h2>
-<div class="card">
-<p>Adicione o link do YouTube na variável CONFIG.youtube.</p>
-<iframe src=""></iframe>
-</div>
-</section>
+<script>
+document.getElementById('logo').src=SITE.logo;
+document.getElementById('nome').textContent=SITE.nomeLiga;
+document.getElementById('slogan').textContent=SITE.slogan;
+document.getElementById('discord').href=SITE.discord;
 
-<section id="regulamento">
-<h2>Regulamento</h2>
-<div class="card">
-<p>Adicione aqui o regulamento da AML.</p>
-</div>
-</section>
+SITE.calendario.forEach(r=>{
+document.getElementById('calendario').innerHTML+=`<div class="card">🏁 Round ${r.round} — ${r.circuito} — ${r.data}</div>`;
+});
 
-<footer>AML Apex Motorsport League © 2026</footer>
+SITE.pilotos.forEach(p=>{
+document.getElementById('pilotos').innerHTML+=`<div class="card">#${p.numero}<br>${p.nome}<br>${p.equipe}<br>${p.categoria}</div>`;
+});
 
-</body>
-</html>
+SITE.equipes.forEach(e=>{
+document.getElementById('equipes').innerHTML+=`<div class="card">${e.nome}<br>${e.categoria}</div>`;
+});
+
+SITE.classificacao.forEach(c=>{
+document.getElementById('classificacao').innerHTML+=`<tr><td>${c.pos}</td><td>${c.piloto}</td><td>${c.equipe}</td><td>${c.pontos}</td></tr>`;
+});
+</script>
+</body></html>

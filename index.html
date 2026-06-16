@@ -3,168 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AML Apex Motorsport League</title>
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
-}
-
 :root{
---green:#c8ff00;
---dark:#0f1115;
---card:#161a20;
---border:#252b33;
+--green:#c8ff00;--dark:#0f1115;--card:#161a20;--border:#252b33;
 }
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{
-background:
-linear-gradient(rgba(15,17,21,.88),rgba(15,17,21,.88)),
-url("https://i.imgur.com/3Bbpuac.png");
-background-size:900px;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-background-color:var(--dark);
-color:white;
+background:linear-gradient(rgba(15,17,21,.85),rgba(15,17,21,.85)),url('https://i.imgur.com/3Bbpuac.png');
+background-size:900px;background-position:center;background-attachment:fixed;
+color:#fff;background-color:var(--dark);
 }
-
-header{
-position:sticky;
-top:0;
-z-index:999;
-background:#11151b;
-border-bottom:2px solid var(--green);
-padding:15px;
-}
-
-nav{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:var(--green);
-}
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero img{
-width:320px;
-max-width:90%;
-}
-
-.hero h1{
-font-size:3rem;
-margin-top:20px;
-}
-
-.hero p{
-color:var(--green);
-margin-top:10px;
-font-size:1.2rem;
-}
-
-.discord-btn{
-margin-top:25px;
-padding:15px 30px;
-background:var(--green);
-color:black;
-font-weight:bold;
-text-decoration:none;
-border-radius:10px;
-}
-
-section{
-max-width:1200px;
-margin:auto;
-padding:60px 20px;
-}
-
-h2{
-color:var(--green);
-margin-bottom:25px;
-}
-
-.card{
-background:rgba(22,26,32,.95);
-border:1px solid var(--border);
-border-radius:12px;
-padding:20px;
-margin-bottom:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th{
-background:var(--green);
-color:black;
-padding:12px;
-}
-
-td{
-padding:12px;
-border-bottom:1px solid var(--border);
-}
-
-iframe{
-width:100%;
-height:600px;
-border:none;
-border-radius:12px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid var(--border);
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2rem;
-}
-
-iframe{
-height:250px;
-}
-
-}
+header{position:sticky;top:0;background:#11151b;border-bottom:2px solid var(--green);z-index:99}
+nav{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;padding:15px}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:var(--green)}
+.hero{text-align:center;padding:60px 20px}
+.hero img{max-width:320px;width:90%}
+.hero h1{margin-top:20px;font-size:3rem}
+.hero p{color:var(--green);margin-top:10px}
+.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:var(--green);color:#000;text-decoration:none;border-radius:8px;font-weight:bold}
+section{max-width:1200px;margin:auto;padding:40px 20px}
+h2{color:var(--green);margin-bottom:20px}
+.card{background:rgba(22,26,32,.96);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid var(--border)}
+th{background:var(--green);color:#000}
+iframe{width:100%;height:500px;border:none;border-radius:12px}
+footer{text-align:center;padding:30px;border-top:1px solid var(--border)}
 </style>
 </head>
-
 <body>
+
+<script>
+const CONFIG={
+nomeLiga:"AML Apex Motorsport League",
+slogan:"COMPETE • EVOLUA • VENÇA",
+discord:"https://discord.gg/tjF3EN53Hs",
+youtube:"",
+proximaCorrida:"Singapore GP - 30/06/2026"
+};
+</script>
 
 <header>
 <nav>
@@ -179,150 +59,63 @@ height:250px;
 </header>
 
 <section id="home" class="hero">
-
 <img src="https://i.imgur.com/tcdrVJ1.png">
-
 <h1>AML APEX MOTORSPORT LEAGUE</h1>
-
 <p>COMPETE • EVOLUA • VENÇA</p>
-
-<a class="discord-btn"
-href="https://discord.gg/tjF3EN53Hs"
-target="_blank">
-ENTRAR NO DISCORD
-</a>
-
+<p><b>Próxima Corrida:</b> Singapore GP - 30/06/2026</p>
+<a class="btn" href="https://discord.gg/tjF3EN53Hs" target="_blank">Entrar no Discord</a>
 </section>
 
 <section id="calendario">
-
 <h2>Calendário 2026</h2>
-
-<div class="card">
-🏁 Round 01 — Lusail 🇶🇦<br>
-📅 16/06/2026
-</div>
-
-<div class="card">
-🏁 Round 02 — Baku 🇦🇿<br>
-📅 23/06/2026
-</div>
-
-<div class="card">
-🏁 Round 03 — Singapore 🇸🇬<br>
-📅 30/06/2026
-</div>
-
+<div class="card">🏁 Round 01 — Lusail 🇶🇦 — 16/06/2026</div>
+<div class="card">🏁 Round 02 — Baku 🇦🇿 — 23/06/2026</div>
+<div class="card">🏁 Round 03 — Singapore 🇸🇬 — 30/06/2026</div>
 </section>
 
 <section id="classificacao">
-
 <h2>Classificação</h2>
-
 <div class="card">
-
 <table>
-
-<tr>
-<th>Pos</th>
-<th>Piloto</th>
-<th>Pontos</th>
-</tr>
-
-<tr>
-<td>1</td>
-<td>PREENCHER</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>PREENCHER</td>
-<td>0</td>
-</tr>
-
+<tr><th>Pos</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
+<tr><td>1</td><td>PREENCHER</td><td>PREENCHER</td><td>0</td></tr>
+<tr><td>2</td><td>PREENCHER</td><td>PREENCHER</td><td>0</td></tr>
 </table>
-
 </div>
-
 </section>
 
 <section id="pilotos">
-
 <h2>Pilotos</h2>
-
 <div class="grid">
-
-<div class="card">
-<h3>#00</h3>
-<p>PREENCHER</p>
-<p>Categoria: PREENCHER</p>
+<div class="card">#01<br>PREENCHER<br>Categoria: PREENCHER</div>
+<div class="card">#02<br>PREENCHER<br>Categoria: PREENCHER</div>
 </div>
-
-<div class="card">
-<h3>#00</h3>
-<p>PREENCHER</p>
-<p>Categoria: PREENCHER</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="equipes">
-
 <h2>Equipes</h2>
-
 <div class="grid">
-
-<div class="card">
-<h3>PREENCHER</h3>
+<div class="card">PREENCHER</div>
+<div class="card">PREENCHER</div>
 </div>
-
-<div class="card">
-<h3>PREENCHER</h3>
-</div>
-
-</div>
-
 </section>
 
 <section id="tv">
-
 <h2>AML TV</h2>
-
 <div class="card">
-
-<p>Insira aqui o link do canal quando criar.</p>
-
-<iframe
-src=""
-allowfullscreen>
-</iframe>
-
+<p>Adicione o link do YouTube na variável CONFIG.youtube.</p>
+<iframe src=""></iframe>
 </div>
-
 </section>
 
 <section id="regulamento">
-
 <h2>Regulamento</h2>
-
 <div class="card">
-
-<p>
-Insira aqui o regulamento oficial da AML.
-</p>
-
+<p>Adicione aqui o regulamento da AML.</p>
 </div>
-
 </section>
 
-<footer>
-
-AML Apex Motorsport League © 2026
-
-</footer>
+<footer>AML Apex Motorsport League © 2026</footer>
 
 </body>
 </html>

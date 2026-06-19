@@ -3,105 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AML Apex Motorsport League</title>
+
+<title>AML Apex Motorsport League | Regulamento Oficial</title>
+
 <style>
-:root{--green:#c8ff00;--dark:#0f1115;--card:#161a20;--border:#252b33}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0f1115;color:#fff}
-header{position:sticky;top:0;background:#11151b;border-bottom:2px solid var(--green)}
-nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;padding:15px}
-nav a{color:#fff;text-decoration:none}
-section{max-width:1200px;margin:auto;padding:40px 20px}
-.hero{text-align:center;padding:60px 20px;background:linear-gradient(rgba(15,17,21,.85),rgba(15,17,21,.85)),url('https://i.imgur.com/3Bbpuac.png');background-size:cover}
-.hero img{max-width:320px}
-.card{background:var(--card);border:1px solid var(--border);padding:15px;border-radius:10px;margin:10px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-table{width:100%;border-collapse:collapse}
-th,td{padding:10px;border-bottom:1px solid var(--border)}
-th{background:var(--green);color:#000}
-h2{color:var(--green);margin-bottom:15px}
+
+:root{
+--aml-green:#c8ff00;
+--aml-dark:#0f1115;
+--aml-card:#161a20;
+--aml-border:#252b33;
+--aml-text:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#0f1115;
+color:#fff;
+}
+
+header{
+background:#11151b;
+border-bottom:3px solid var(--aml-green);
+text-align:center;
+padding:50px 20px;
+}
+
+.logo{
+max-width:250px;
+margin-bottom:20px;
+}
+
+header h1{
+color:var(--aml-green);
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+color:#aaa;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.article{
+background:#161a20;
+border:1px solid #252b33;
+border-radius:12px;
+padding:25px;
+margin-bottom:20px;
+}
+
+.article h2{
+color:#c8ff00;
+margin-bottom:15px;
+}
+
+.article p,
+.article li{
+line-height:1.8;
+}
+
+.article ul{
+margin-left:25px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #252b33;
+margin-top:40px;
+}
+
+footer span{
+color:#c8ff00;
+font-weight:bold;
+}
+
 </style>
 </head>
+
 <body>
 
-<script>
-const SITE={
-nomeLiga:"AML Apex Motorsport League",
-slogan:"COMPETE • EVOLUA • VENÇA",
-logo:"https://i.imgur.com/tcdrVJ1.png",
-fundo:"https://i.imgur.com/3Bbpuac.png",
-discord:"https://discord.gg/tjF3EN53Hs",
-youtube:"",
+<header>
 
-calendario:[
-{},
-{},
-{}
-],
+<img src="https://i.imgur.com/tcdrVJ1.png" class="logo">
 
-pilotos:[
-{}
-],
+<h1>REGULAMENTO DESPORTIVO OFICIAL</h1>
 
-equipes:[
-{}
-],
+<p>AML Apex Motorsport League • Temporada 2025/2026</p>
 
-classificacao:[
-{}
-]
-};
-</script>
+</header>
 
-<header><nav>
-<a href="#home">Home</a>
-<a href="#cal">Calendário</a>
-<a href="#cls">Classificação</a>
-<a href="#pil">Pilotos</a>
-<a href="#eq">Equipes</a>
-<a href="#tv">AML TV</a>
-</nav></header>
+<div class="container">
 
-<section id="home" class="hero">
-<img id="logo">
-<h1 id="nome"></h1>
-<p id="slogan"></p>
-<p><a id="discord" style="color:#c8ff00">Discord</a></p>
-</section>
+<div class="article">
+<h2>Artigo 1 — Objetivo</h2>
+<p>
+Promover competições de automobilismo virtual de forma justa,
+organizada, competitiva e profissional.
+</p>
+</div>
 
-<section id="cal"><h2>Calendário</h2><div id="calendario"></div></section>
+<div class="article">
+<h2>Artigo 2 — Discord Oficial</h2>
+<p>
+Todos os pilotos deverão permanecer no Discord oficial da AML
+durante as etapas.
+</p>
+</div>
 
-<section id="cls"><h2>Classificação</h2>
-<table><thead><tr><th>Pos</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr></thead>
-<tbody id="classificacao"></tbody></table>
-</section>
+<div class="article">
+<h2>Artigo 3 — Taxa de Inscrição</h2>
+<p>
+A AML poderá cobrar taxa de inscrição de acordo com a categoria,
+campeonato ou evento especial.
+</p>
+</div>
 
-<section id="pil"><h2>Pilotos</h2><div class="grid" id="pilotos"></div></section>
+<div class="article">
+<h2>Artigo 4 — Eventos de Resistência</h2>
+<ul>
+<li>Dia 1: Treino Oficial e Classificação</li>
+<li>Dia 2: Corrida Oficial</li>
+</ul>
+</div>
 
-<section id="eq"><h2>Equipes</h2><div class="grid" id="equipes"></div></section>
+<div class="article">
+<h2>Artigo 5 — Clima Real</h2>
+<p>
+As etapas utilizarão, sempre que possível, condições climáticas
+baseadas na previsão real da localidade do circuito.
+</p>
+</div>
 
-<section id="tv"><h2>AML TV</h2><div class="card">Cole o link do YouTube em SITE.youtube</div></section>
+<div class="article">
+<h2>Artigo 6 — Conduta dos Pilotos</h2>
+<ul>
+<li>Respeitar adversários</li>
+<li>Respeitar a Administração</li>
+<li>Respeitar a AML TV</li>
+<li>Respeitar a Direção de Prova</li>
+<li>Manter espírito esportivo</li>
+</ul>
+</div>
 
-<script>
-document.getElementById('logo').src=SITE.logo;
-document.getElementById('nome').textContent=SITE.nomeLiga;
-document.getElementById('slogan').textContent=SITE.slogan;
-document.getElementById('discord').href=SITE.discord;
+<div class="article">
+<h2>Artigo 7 — Ultrapassagens</h2>
+<p>
+Toda ultrapassagem deverá ocorrer de forma segura e respeitando os limites da pista.
+</p>
+</div>
 
-SITE.calendario.forEach(r=>{
-document.getElementById('calendario').innerHTML+=`<div class="card">🏁 Round ${r.round} — ${r.circuito} — ${r.data}</div>`;
-});
+<div class="article">
+<h2>Artigo 8 — Limites de Pista</h2>
+<p>
+Ganhos recorrentes de vantagem através de cortes de pista poderão resultar em penalizações.
+</p>
+</div>
 
-SITE.pilotos.forEach(p=>{
-document.getElementById('pilotos').innerHTML+=`<div class="card">#${p.numero}<br>${p.nome}<br>${p.equipe}<br>${p.categoria}</div>`;
-});
+<div class="article">
+<h2>Artigo 9 — Penalidades</h2>
+<ul>
+<li>Advertência</li>
+<li>Acréscimo de Tempo</li>
+<li>Perda de Posições</li>
+<li>Desclassificação</li>
+<li>Suspensão</li>
+</ul>
+</div>
 
-SITE.equipes.forEach(e=>{
-document.getElementById('equipes').innerHTML+=`<div class="card">${e.nome}<br>${e.categoria}</div>`;
-});
+<div class="article">
+<h2>Artigo 10 — Sistema Disciplinar</h2>
+<p>
+A AML poderá utilizar sistema de pontos disciplinares para monitorar condutas reincidentes.
+</p>
+</div>
 
-SITE.classificacao.forEach(c=>{
-document.getElementById('classificacao').innerHTML+=`<tr><td>${c.pos}</td><td>${c.piloto}</td><td>${c.equipe}</td><td>${c.pontos}</td></tr>`;
-});
-</script>
-</body></html>
+<div class="article">
+<h2>Artigo 11 — Ausências</h2>
+<p>
+O piloto deverá informar ausências previamente sempre que possível.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 12 — Check-in Obrigatório</h2>
+<p>
+A organização poderá exigir confirmação de presença antes das etapas.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 13 — AML TV</h2>
+<p>
+Ao participar dos eventos oficiais da AML, o piloto autoriza a utilização de sua imagem virtual para transmissões e divulgação.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 14 — Protestos</h2>
+<p>
+Os protestos deverão ser enviados em até 24 horas após o término da corrida e acompanhados de evidências.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 15 — Administração</h2>
+<p>
+A Administração AML e a Direção de Prova possuem autoridade para aplicar este regulamento.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 16 — Casos Omissos</h2>
+<p>
+Situações não previstas neste regulamento serão analisadas pela Administração AML.
+</p>
+</div>
+
+<div class="article">
+<h2>Artigo 17 — Aceitação do Regulamento</h2>
+<p>
+Ao realizar sua inscrição, o participante declara ter lido e aceitado integralmente este regulamento.
+</p>
+</div>
+
+</div>
+
+<footer>
+
+🏁 <span>COMPETE • EVOLVE • WIN</span>
+
+<br><br>
+
+AML Apex Motorsport League © 2025
+
+</footer>
+
+</body>
+</html>
